@@ -8,7 +8,7 @@ class Student(Person):
         
     def info(self):
         print(f"Person:\n First name: {self.firstname}\n Last name: {self.lastname}\n "
-             f"Email:{self.email}\n Mobile: {self.mobilenumber}\n"
+             f"Email:{self.email}\n Mobile:+ {self.mobilenumber}\n"
              f"Is a Student of the following courses and has grades")
         courses =  {
             "Git":"7",
@@ -31,5 +31,10 @@ try:
 except EmailSyntaxError as e:
     print(str(e))
 number = input("Enter your phone number: ")
+print(number[0])
+print(len(number))
+while(number[0]!="+" and len(number)!=10):
+    print("Error phone number format")
+    number= input("Enter new phone number: ")
 x = Student(name,surname,email,number)
 x.info()
