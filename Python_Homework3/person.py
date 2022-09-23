@@ -4,5 +4,7 @@ class Person:
          self.lastname = str(lname)
          self.email = str(email)
          self.mobilenumber = int(mobnumb)
-
-   
+    
+    def info_person(self):
+         print(f"Person:\n First name: {self.firstname}\n Last name: {self.lastname}\n "
+             f"Email:{self.email}\n Mobile:+ {self.mobilenumber}\n")
