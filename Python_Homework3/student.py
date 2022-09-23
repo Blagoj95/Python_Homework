@@ -24,12 +24,11 @@ class Student(Person):
 name = input("Enter your name: ")
 surname = input("Enter your surname: ")
 email = input("Enter your email: ")
-email = input("Invalide email address, Enter valid email addres: ")
 try:
     email = validate_email(email).email
 except EmailSyntaxError as e:
     print(str(e))
-number = input("Enter your phone number: ")
+number = int(input("Enter your phone number: "))
 
 
 x = Student(name,surname,email,number)
